@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestor de Tareas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="light">
+  <div class="app">
+    <aside class="sidebar card">
+      <h2>Usuarios</h2>
+      <ul id="userList"></ul>
+      <input type="text" id="newUserInput" placeholder="Nuevo usuario..." />
+      <button onclick="addUser()">Añadir Usuario</button>
+    
+      <div id="userInfo" class="hidden">
+        <hr />
+        <p id="userName"></p>
+        <p id="userStats"></p>
+        <button onclick="deselectUser()">Deseleccionar</button>
+      </div>
+    
+      <button onclick="toggleTheme()" style="margin-top:auto">🌙/☀️ Tema</button>
+    </aside>
+    <main class="main">
+      <div class="card">
+        <h1 id="mainTitle">Selecciona un usuario</h1>
+        <div id="taskSection" class="hidden">
+          <ul id="taskList"></ul>
+          <input type="text" id="newTaskInput" placeholder="Nueva tarea..." />
+          <button onclick="addTask()">Añadir Tarea</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
